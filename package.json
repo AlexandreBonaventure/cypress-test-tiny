@@ -4,6 +4,8 @@
   "description": "Small project for quickly testing Cypress.io test runner",
   "scripts": {
     "cypress:run": "cypress run",
+    "start-server-and-test": "run-p start-server cypress:open",
+    "start-server": "servor app",
     "cypress:open": "cypress open",
     "cypress:verify": "cypress verify",
     "cypress:version": "cypress version",
@@ -17,7 +19,13 @@
   "author": "Gleb Bahmutov <gleb@cypress.io>",
   "license": "ISC",
   "devDependencies": {
-    "ok-file": "1.5.2"
+    "ok-file": "1.5.2",
+    "servor": "4.0.2",
+    "npm-run-all": "latest",
+    "cypress": "9.1.0"
+  },
+  "resolutions": {
+    "@cypress/request": "2.88.7"
   },
   "repository": {
     "type": "git",
